@@ -20,16 +20,6 @@ def move_wallplayer():
         player.rect.bottom = SCREEN_HEIGHT
 
 def move_wallbot():
-    if random.random() < 0.15:
-        choice = random.choice([1, 2, 3])
-        
-        if choice == 1:
-            return
-        elif choice == 2:
-            target_y = ball.rect.centery + random.randint(-50, 50)
-        else:
-            bot.rect.y += random.choice([-10, 10])
-            return
     if bot.rect.centery < ball.rect.centery:
         bot.rect.y += 4
     else:
